@@ -1,0 +1,1 @@
+A blog developed on django

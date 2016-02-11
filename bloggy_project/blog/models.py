@@ -8,6 +8,8 @@ class Post(models.Model):
 	# created_at will be created automatically but the
 	# following are need to be added explicitly 
 	title = models.CharField(max_length=100)
+	tag = models.CharField(max_length=20, blank=True, null=True)
+	image = models.ImageField(upload_to = "images", blank=True, null=True)
 	content = models.TextField()
 
 	def __unicode__(self):

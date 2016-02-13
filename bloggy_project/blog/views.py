@@ -18,6 +18,8 @@ def post(request, post_url):
 	# get_object_or_404 method queries the database for objects
 	# by a specific type(id) and returns it if found, else returns a 404 error.
 	single_post = get_object_or_404(Post, title=post_url.replace('_', ' '))
+	single_post.views += 1     # incrementing the number of views
+	single_post.save()         # and saving it
 	t = loader.get_template('blog/post.html')
 	c = Context({'single_post': single_post, })
 	return HttpResponse(t.render(c))

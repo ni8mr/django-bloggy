@@ -7,7 +7,7 @@ urlpatterns = [
 ]
 
 # Explaining "(?P<post_id>d+)" expression
-# (?P<Y>...) capturing group named post_id
+# (?P<post_id>...) capturing group named post_id
 # \d means catching 1 digit
 # + means 1 or more
 # in a word, we are extracting 1 digit post_id from the url 
